@@ -1,21 +1,12 @@
-# Add  code here!
 def prime?(number)
-  answer = false 
-  if number == 1 
-    answer = false 
-  elsif number == 2 
-    answer = true 
-  else 
-    range = (1..number-1).to_a 
-    answer = true 
-    range.each do |numOne|
-      range.each do |numTwo|
-        if numOne * numTwo == number 
-          answer = false 
-        end 
-      end 
+  start = 2
+  if number > 1
+    range = (start..number-1).to_a
+    range.none? do |num_to_test| #none of the numbers should return true for none? to return true. If none of the numbers
+                                # return true, then they are not divisible by the number and the number is prime
+      number % num_to_test == 0
     end
-  end 
-  answer 
-end 
-  
+  else
+    false
+  end
+end
