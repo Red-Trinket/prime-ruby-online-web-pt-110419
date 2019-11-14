@@ -1,21 +1,21 @@
 # Add  code here!
-def prime_test(number)
-  is_prime = false 
+def prime?(number)
+  answer = false 
   if number == 1 
-    is_prime = false 
+    answer = false 
   elsif number == 2 
-    is_prime = true 
+    answer = true 
   else 
     range = (1..number).to_a 
-    is_prime = true 
+    answer = true 
     range.each do |numOne|
       range.each do |numTwo|
         if numOne * numTwo == number 
-          is_prime = false 
+          answer = false 
         end 
       end 
     end
   end 
-  is_prime 
+  answer 
 end 
   
