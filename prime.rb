@@ -4,5 +4,11 @@ def prime_test(number)
   is_prime = true 
   range.each do |numOne|
     range.each do |numTwo|
-      if numOne * 
+      if numOne * numTwo == number 
+        is_prime = false 
+      end 
+    end 
+  end
+  is_prime 
+end 
   
