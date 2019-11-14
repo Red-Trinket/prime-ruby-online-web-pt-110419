@@ -6,7 +6,7 @@ def prime?(number)
   elsif number == 2 
     answer = true 
   else 
-    range = (1..number).to_a 
+    range = (1..number-1).to_a 
     answer = true 
     range.each do |numOne|
       range.each do |numTwo|
